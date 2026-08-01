@@ -1,0 +1,385 @@
+loomx.loom_version="1.16-SNAPSHOT"
+
+
+mod.id = "coords_copy"
+mod.name = "CoordsCopy"
+mod.group = "net.marios271"
+mod.version = "2.0.0"
+mod.channel_tag = ""
+mod.description = "A minecraft mod which enables you to copy player and block coordinates with the press of a button."
+mod.authors = ["MarioS271"]
+mod.contributors = []
+mod.inception_year = "2026"
+mod.license.name = "GPL-3.0-only"
+mod.license.url = "https://www.gnu.org/licenses/gpl-3.0.html"
+mod.license.dist = "repo"
+mod.sources_url = "https://github.com/MarioS271/coords_copy"
+mod.homepage_url = "https://github.com/MarioS271/coords_copy"
+mod.issues_url = "https://github.com/MarioS271/coords_copy/issues"
+mod.discord_url = ""
+mod.environment = "client"
+[[mod.pom.developers]]
+id = "marios271"
+name = "MarioS271"
+url = "https://github.com/MarioS271"
+
+
+#### FABRIC ####
+[fabric]
+deps.fabric-loader = "0.19.2"
+
+[fabric."1.16.5"]
+deps.minecraft = "1.16.5"
+deps.fabric-api = "0.42.0+1.16"
+deps.modmenu = "1.16.23"
+deps.cloth-config = "4.17.101"
+
+[fabric."1.17.1"]
+deps.minecraft = "1.17.1"
+deps.fabric-api = "0.46.1+1.17"
+deps.modmenu = "2.0.17"
+deps.cloth-config = "5.3.63"
+
+[fabric."1.18"]
+deps.minecraft = "1.18"
+deps.fabric-api = "0.43.1+1.18"
+deps.modmenu = "3.0.1"
+deps.cloth-config = "6.5.102"
+
+[fabric."1.18.1"]
+deps.minecraft = "1.18.1"
+deps.fabric-api = "0.46.6+1.18"
+deps.modmenu = "3.0.1"
+deps.cloth-config = "6.5.102"
+
+[fabric."1.18.2"]
+deps.minecraft = "1.18.2"
+deps.fabric-api = "0.77.0+1.18.2"
+deps.modmenu = "3.2.5"
+deps.cloth-config = "6.5.102"
+
+[fabric."1.19"]
+deps.minecraft = "1.19"
+deps.fabric-api = "0.58.0+1.19"
+deps.modmenu = "4.0.4"
+deps.cloth-config = "8.3.134"
+
+[fabric."1.19.1"]
+deps.minecraft = "1.19.1"
+deps.fabric-api = "0.58.5+1.19.1"
+deps.modmenu = "4.0.5"
+deps.cloth-config = "8.3.134"
+
+[fabric."1.19.2"]
+deps.minecraft = "1.19.2"
+deps.fabric-api = "0.77.0+1.19.2"
+deps.modmenu = "4.1.2"
+deps.cloth-config = "8.3.134"
+
+[fabric."1.19.3"]
+deps.minecraft = "1.19.3"
+deps.fabric-api = "0.76.1+1.19.3"
+deps.modmenu = "5.1.0"
+deps.cloth-config = "9.0.94"
+
+[fabric."1.19.4"]
+deps.minecraft = "1.19.4"
+deps.fabric-api = "0.87.2+1.19.4"
+deps.modmenu = "6.3.1"
+deps.cloth-config = "10.1.135"
+
+[fabric."1.20"]
+deps.minecraft = "1.20"
+deps.fabric-api = "0.83.0+1.20"
+deps.modmenu = "7.0.1"
+deps.cloth-config = "11.1.136"
+
+[fabric."1.20.1"]
+deps.minecraft = "1.20.1"
+deps.fabric-api = "0.92.11+1.20.1"
+deps.modmenu = "7.2.2"
+deps.cloth-config = "11.1.136"
+
+[fabric."1.20.2"]
+deps.minecraft = "1.20.2"
+deps.fabric-api = "0.91.6+1.20.2"
+deps.modmenu = "8.0.1"
+deps.cloth-config = "12.0.137"
+
+[fabric."1.20.3"]
+deps.minecraft = "1.20.3"
+deps.fabric-api = "0.91.1+1.20.3"
+deps.modmenu = "9.0.0"
+deps.cloth-config = "13.0.138"
+
+[fabric."1.20.4"]
+deps.minecraft = "1.20.4"
+deps.fabric-api = "0.97.3+1.20.4"
+deps.modmenu = "9.2.0"
+deps.cloth-config = "13.0.138"
+
+[fabric."1.20.5"]
+deps.minecraft = "1.20.5"
+deps.fabric-api = "0.97.8+1.20.5"
+deps.modmenu = "10.0.0"
+deps.cloth-config = "14.0.139"
+
+[fabric."1.20.6"]
+deps.minecraft = "1.20.6"
+deps.fabric-api = "0.100.8+1.20.6"
+deps.modmenu = "10.0.0"
+deps.cloth-config = "14.0.139"
+
+[fabric."1.21"]
+deps.minecraft = "1.21"
+deps.fabric-api = "0.102.0+1.21"
+deps.modmenu = "11.0.4"
+deps.cloth-config = "15.0.140"
+
+[fabric."1.21.1"]
+deps.minecraft = "1.21.1"
+deps.fabric-api = "0.116.15+1.21.1"
+deps.modmenu = "11.0.4"
+deps.cloth-config = "15.0.140"
+
+[fabric."1.21.2"]
+deps.minecraft = "1.21.2"
+deps.fabric-api = "0.106.1+1.21.2"
+deps.modmenu = "12.0.1"
+deps.cloth-config = "16.0.143"
+
+[fabric."1.21.3"]
+deps.minecraft = "1.21.3"
+deps.fabric-api = "0.114.1+1.21.3"
+deps.modmenu = "12.0.1"
+deps.cloth-config = "16.0.143"
+
+[fabric."1.21.4"]
+deps.minecraft = "1.21.4"
+deps.fabric-api = "0.119.4+1.21.4"
+deps.modmenu = "13.0.4"
+deps.cloth-config = "17.0.144"
+
+[fabric."1.21.5"]
+deps.minecraft = "1.21.5"
+deps.fabric-api = "0.128.2+1.21.5"
+deps.modmenu = "14.0.2"
+deps.cloth-config = "18.0.145"
+
+[fabric."1.21.6"]
+deps.minecraft = "1.21.6"
+deps.fabric-api = "0.128.2+1.21.6"
+deps.modmenu = "15.0.2"
+deps.cloth-config = "19.0.147"
+
+[fabric."1.21.7"]
+deps.minecraft = "1.21.7"
+deps.fabric-api = "0.129.0+1.21.7"
+deps.modmenu = "15.0.2"
+deps.cloth-config = "19.0.147"
+
+[fabric."1.21.8"]
+deps.minecraft = "1.21.8"
+deps.fabric-api = "0.136.1+1.21.8"
+deps.modmenu = "15.0.2"
+deps.cloth-config = "19.0.147"
+
+[fabric."1.21.9"]
+deps.minecraft = "1.21.9"
+deps.fabric-api = "0.134.1+1.21.9"
+deps.modmenu = "16.0.1"
+deps.cloth-config = "20.0.149"
+
+[fabric."1.21.10"]
+deps.minecraft = "1.21.10"
+deps.fabric-api = "0.138.4+1.21.10"
+deps.modmenu = "16.0.1"
+deps.cloth-config = "20.0.149"
+
+[fabric."1.21.11"]
+deps.minecraft = "1.21.11"
+deps.fabric-api = "0.141.6+1.21.11"
+deps.modmenu = "17.0.0"
+deps.cloth-config = "21.11.153"
+
+[fabric."26.1"]
+deps.minecraft = "26.1"
+deps.fabric-api = "0.145.4+26.1.2"
+deps.modmenu = "18.0.0"
+deps.cloth-config = "26.1.154"
+
+[fabric."26.1.1"]
+deps.minecraft = "26.1.1"
+deps.fabric-api = "0.145.4+26.1.2"
+deps.modmenu = "18.0.0"
+deps.cloth-config = "26.1.154"
+
+[fabric."26.1.2"]
+deps.minecraft = "26.1.2"
+deps.fabric-api = "0.145.4+26.1.2"
+deps.modmenu = "18.0.0"
+deps.cloth-config = "26.1.154"
+
+[fabric."26.2"]
+deps.minecraft = "26.2"
+deps.fabric-api = "0.155.2+26.2"
+deps.modmenu = "20.0.1"
+deps.cloth-config = "26.2.155"
+
+
+#### FORGE ####
+[forge]
+
+[forge."1.16.5"]
+deps.minecraft = "1.16.5"
+deps.forge = "36.2.34"
+deps.cloth-config = "4.17.101"
+
+[forge."1.17.1"]
+deps.minecraft = "1.17.1"
+deps.forge = "37.1.1"
+deps.cloth-config = "5.3.63"
+
+[forge."1.18"]
+deps.minecraft = "1.18"
+deps.forge = "38.0.17"
+deps.cloth-config = "6.5.102"
+
+[forge."1.18.1"]
+deps.minecraft = "1.18.1"
+deps.forge = "39.1.0"
+deps.cloth-config = "6.5.102"
+
+[forge."1.18.2"]
+deps.minecraft = "1.18.2"
+deps.forge = "40.3.0"
+deps.cloth-config = "6.5.102"
+
+[forge."1.19"]
+deps.minecraft = "1.19"
+deps.forge = "41.1.0"
+deps.cloth-config = "8.3.134"
+
+[forge."1.19.1"]
+deps.minecraft = "1.19.1"
+deps.forge = "42.0.9"
+deps.cloth-config = "8.3.134"
+
+[forge."1.19.2"]
+deps.minecraft = "1.19.2"
+deps.forge = "43.5.0"
+deps.cloth-config = "8.3.134"
+
+[forge."1.19.3"]
+deps.minecraft = "1.19.3"
+deps.forge = "44.1.0"
+deps.cloth-config = "9.0.94"
+
+[forge."1.19.4"]
+deps.minecraft = "1.19.4"
+deps.forge = "45.4.0"
+deps.cloth-config = "10.1.135"
+
+[forge."1.20"]
+deps.minecraft = "1.20"
+deps.forge = "46.0.14"
+deps.cloth-config = "11.1.136"
+
+[forge."1.20.1"]
+deps.minecraft = "1.20.1"
+deps.forge = "47.4.10"
+deps.cloth-config = "11.1.136"
+
+
+#### NEOFORGE ####
+[neoforge]
+
+[neoforge."1.20.4"]
+deps.minecraft = "1.20.4"
+deps.neoforge = "20.4.251"
+deps.cloth-config = "13.0.138"
+
+[neoforge."1.20.6"]
+deps.minecraft = "1.20.6"
+deps.neoforge = "20.6.139"
+deps.cloth-config = "14.0.139"
+
+[neoforge."1.21"]
+deps.minecraft = "1.21"
+deps.neoforge = "21.0.167"
+deps.cloth-config = "15.0.140"
+
+[neoforge."1.21.1"]
+deps.minecraft = "1.21.1"
+deps.neoforge = "21.1.247"
+deps.cloth-config = "15.0.140"
+
+[neoforge."1.21.2"]
+deps.minecraft = "1.21.2"
+deps.neoforge = "21.2.1-beta"
+deps.cloth-config = "16.0.143"
+
+[neoforge."1.21.3"]
+deps.minecraft = "1.21.3"
+deps.neoforge = "21.3.97"
+deps.cloth-config = "16.0.143"
+
+[neoforge."1.21.4"]
+deps.minecraft = "1.21.4"
+deps.neoforge = "21.4.157"
+deps.cloth-config = "17.0.144"
+
+[neoforge."1.21.5"]
+deps.minecraft = "1.21.5"
+deps.neoforge = "21.5.98"
+deps.cloth-config = "18.0.145"
+
+[neoforge."1.21.6"]
+deps.minecraft = "1.21.6"
+deps.neoforge = "21.6.20-beta"
+deps.cloth-config = "19.0.147"
+
+[neoforge."1.21.7"]
+deps.minecraft = "1.21.7"
+deps.neoforge = "21.7.25-beta"
+deps.cloth-config = "19.0.147"
+
+[neoforge."1.21.8"]
+deps.minecraft = "1.21.8"
+deps.neoforge = "21.8.54"
+deps.cloth-config = "19.0.147"
+
+[neoforge."1.21.9"]
+deps.minecraft = "1.21.9"
+deps.neoforge = "21.9.16-beta"
+deps.cloth-config = "20.0.149"
+
+[neoforge."1.21.10"]
+deps.minecraft = "1.21.10"
+deps.neoforge = "21.10.64"
+deps.cloth-config = "20.0.149"
+
+[neoforge."1.21.11"]
+deps.minecraft = "1.21.11"
+deps.neoforge = "21.11.45"
+deps.cloth-config = "21.11.153"
+
+[neoforge."26.1"]
+deps.minecraft = "26.1"
+deps.neoforge = "26.1.0.19-beta"
+deps.cloth-config = "26.1.154"
+
+[neoforge."26.1.1"]
+deps.minecraft = "26.1.1"
+deps.neoforge = "26.1.1.15-beta"
+deps.cloth-config = "26.1.154"
+
+[neoforge."26.1.2"]
+deps.minecraft = "26.1"
+deps.neoforge = "26.1.2.93"
+deps.cloth-config = "26.1.154"
+
+[neoforge."26.2"]
+deps.minecraft = "26.2"
+deps.neoforge = "26.2.0.41-beta"
+deps.cloth-config = "26.2.155"

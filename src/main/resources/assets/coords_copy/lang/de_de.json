@@ -1,0 +1,16 @@
+{
+  "key.categories.coords_copy": "CoordsCopy",
+  "key.category.coords_copy.coords_copy": "CoordsCopy",
+  "key.coords_copy.copy_player_coords": "Spielerkoordinaten kopieren",
+  "key.coords_copy.copy_block_coords": "Blockkoordinaten kopieren",
+  "key.coords_copy.open_config": "Config öffnen",
+
+  "message.coords_copy.copied_player_coords": "Spielerkoordinaten kopiert (%s)",
+  "message.coords_copy.copied_block_coords": "Blockkoordinaten kopiert (%s)",
+  "message.coords_copy.no_block": "§cDu schaust keinen Block an!§r",
+  "message.coords_copy.error": "§cEtwas ist beim Kopieren der Koordinaten des anvisierten Blockes schiefgelaufen§r",
+
+  "text.coords_copy.config.title": "CoordsCopy-Konfiguration",
+  "text.coords_copy.config.category": "CoordsCopy",
+  "text.coords_copy.config.option.chat_instead_of_actionbar": "Sende Ausgabe im Chat statt zur Action Bar"
+}
