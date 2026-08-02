@@ -4,7 +4,11 @@ import net.marios271.coords_copy.CoordsCopy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
+//? < 1.19 {
+/*import net.minecraft.network.chat.TranslatableComponent;
+*///?} else {
+import net.minecraft.network.chat.Component;
+//?}
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 
@@ -65,28 +69,28 @@ public class CopyBlockCoordsAction {
         if (client.player == null) return;
 
 		//? < 1.17 {
-		Component msg;
+		/*Component msg;
 		switch (copyMessage) {
 			case COPY_MSG_COPIED_PLAYER: msg = new TranslatableComponent("message.coords_copy.copied_player_coords", coords); break;
 			case COPY_MSG_COPIED_BLOCK: msg = new TranslatableComponent("message.coords_copy.copied_block_coords", coords); break;
 			case COPY_MSG_NO_BLOCK: msg = new TranslatableComponent("message.coords_copy.no_block"); break;
 			default: msg = new TranslatableComponent("message.coords_copy.error"); break;
 		}
-		//?} >= 1.17 && < 1.19 {
+		*///?} >= 1.17 && < 1.19 {
         /*Component msg = switch (copyMessage) {
             case COPY_MSG_COPIED_PLAYER -> new TranslatableComponent("message.coords_copy.copied_player_coords", coords);
             case COPY_MSG_COPIED_BLOCK -> new TranslatableComponent("message.coords_copy.copied_block_coords", coords);
             case COPY_MSG_NO_BLOCK -> new TranslatableComponent("message.coords_copy.no_block");
             default -> new TranslatableComponent("message.coords_copy.error");
-        }
+        };
 		*///?} else {
-		/*Component msg = switch (copyMessage) {
+		Component msg = switch (copyMessage) {
 			case COPY_MSG_COPIED_PLAYER -> Component.translatable("message.coords_copy.copied_player_coords", coords);
 			case COPY_MSG_COPIED_BLOCK -> Component.translatable("message.coords_copy.copied_block_coords", coords);
 			case COPY_MSG_NO_BLOCK -> Component.translatable("message.coords_copy.no_block");
 			default -> Component.translatable("message.coords_copy.error");
-		}
-		*///?}
+		};
+		//?}
 
 		//? >= 26.1 {
         /*if (chatOutput) client.player.sendSystemMessage(msg);

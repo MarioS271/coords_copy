@@ -36,7 +36,19 @@ stonecutter {
 		version("1.16.5-forge", "1.16.5").buildscript = "build.forge-legacy.gradle.kts"
 		match("1.16.5", "fabric")
 		match("1.17.1", "fabric", "forge")
+		match("1.18", "fabric", "forge")
+		match("1.18.1", "fabric", "forge")
+		match("1.18.2", "fabric", "forge")
+		match("1.19", "fabric", "forge")
+		match("1.19.1", "fabric", "forge")
+		match("1.19.2", "fabric", "forge")
+		match("1.19.3", "fabric", "forge")
+		match("1.19.4", "fabric", "forge")
+		match("1.20", "fabric", "forge")
+		match("1.20.1", "fabric", "forge")
+		match("1.20.2", "fabric")
+		match("1.20.3", "fabric")
 
-		vcsVersion = "1.16.5-fabric"
+		vcsVersion = "1.20.3-fabric"
 	}
 }

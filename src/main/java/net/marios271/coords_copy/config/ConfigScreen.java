@@ -5,10 +5,10 @@ import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.client.gui.screens.Screen;
 //? < 1.19 {
-import net.minecraft.network.chat.TranslatableComponent;
-//?} else {
-/*import net.minecraft.network.chat.Component;
-*///?}
+/*import net.minecraft.network.chat.TranslatableComponent;
+*///?} else {
+import net.minecraft.network.chat.Component;
+//?}
 
 public class ConfigScreen {
     public static Screen create(Screen parent, ConfigData config) {
@@ -16,28 +16,28 @@ public class ConfigScreen {
             .setParentScreen(parent)
             .setTitle(
 				//? < 1.19 {
-				new TranslatableComponent("text.coords_copy.config.title")
-				//?} else {
-				/*Component.translatable("text.coords_copy.config.title")
-				 *///?}
+				/*new TranslatableComponent("text.coords_copy.config.title")
+				*///?} else {
+				Component.translatable("text.coords_copy.config.title")
+				//?}
 			);
 
         ConfigCategory category = builder.getOrCreateCategory(
 			//? < 1.19 {
-			new TranslatableComponent("text.coords_copy.config.category")
-			//?} else {
-			/*Component.translatable("text.coords_copy.config.category")
-			 *///?}
+			/*new TranslatableComponent("text.coords_copy.config.category")
+			*///?} else {
+			Component.translatable("text.coords_copy.config.category")
+			//?}
 		);
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
         // Show in Chat instead of Actionbar
         category.addEntry(entryBuilder.startBooleanToggle(
 			//? < 1.19 {
-			new TranslatableComponent("text.coords_copy.config.option.chat_instead_of_actionbar"),
-			//?} else {
-			/*Component.translatable("text.coords_copy.config.option.chat_instead_of_actionbar"),
-			*///?}
+			/*new TranslatableComponent("text.coords_copy.config.option.chat_instead_of_actionbar"),
+			*///?} else {
+			Component.translatable("text.coords_copy.config.option.chat_instead_of_actionbar"),
+			//?}
 			config.chat_instead_of_actionbar
 		)
             .setDefaultValue(true)
