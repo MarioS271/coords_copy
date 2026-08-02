@@ -96,7 +96,7 @@ public class CopyBlockCoordsAction {
         /*if (chatOutput) client.player.sendSystemMessage(msg);
         else client.player.sendOverlayMessage(msg);
 		*///?} else {
-		client.player.displayClientMessage(msg, chatOutput);
+		client.player.displayClientMessage(msg, !chatOutput);
 		//?}
     }
 }
