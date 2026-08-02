@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       mc_version: ${{ steps.validate.outputs.mc_version }}
+      build_tasks: ${{ steps.validate.outputs.build_tasks }}
+      publish_tasks: ${{ steps.validate.outputs.publish_tasks }}
     steps:
       - uses: actions/checkout@v4
 
@@ -20,11 +22,22 @@ jobs:
         id: validate
         run: |
           TAG="${GITHUB_REF_NAME}"
-          if ! grep -qE "^\s+match\(\"${TAG}\"" settings.gradle.kts; then
+          LINE=$(grep -E "^\s+match\(\"${TAG}\"" settings.gradle.kts || true)
+          if [ -z "$LINE" ]; then
             echo "::error::Tag '${TAG}' is not an active MC version in settings.gradle.kts"
             exit 1
           fi
+          # Extract the loaders from e.g. match("1.21.8", "fabric", "neoforge")
+          LOADERS=$(echo "$LINE" | sed -E 's/^\s*match\("[^"]+"\s*,\s*//; s/\).*$//' | tr -d ' "' | tr ',' '\n')
+          BUILD_TASKS=""
+          PUBLISH_TASKS=""
+          for L in $LOADERS; do
+            BUILD_TASKS="$BUILD_TASKS :${TAG}-${L}:buildAndCollect"
+            PUBLISH_TASKS="$PUBLISH_TASKS :${TAG}-${L}:publishMods"
+          done
           echo "mc_version=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "build_tasks=${BUILD_TASKS# }" >> "$GITHUB_OUTPUT"
+          echo "publish_tasks=${PUBLISH_TASKS# }" >> "$GITHUB_OUTPUT"
 
   build-and-release:
     name: Build & Release
@@ -50,7 +63,7 @@ jobs:
           gradle-version: wrapper
 
       - name: Build MC ${{ needs.validate.outputs.mc_version }}
-        run: ./gradlew buildAndCollect${MC_VERSION} --no-daemon
+        run: ./gradlew ${{ needs.validate.outputs.build_tasks }} --no-daemon
 
       - name: Drop javadoc jars from release assets
         if: vars.PUB_GITHUB_RELEASES == 'true'
@@ -73,4 +86,4 @@ jobs:
           PUB_CURSEFORGE_PROJECT_ID: ${{ vars.PUB_CURSEFORGE_PROJECT_ID }}
           PUB_MODRINTH_TOKEN: ${{ secrets.PUB_MODRINTH_TOKEN }}
           PUB_CURSEFORGE_TOKEN: ${{ secrets.PUB_CURSEFORGE_TOKEN }}
-        run: ./gradlew publish${MC_VERSION} --stacktrace
+        run: ./gradlew ${{ needs.validate.outputs.publish_tasks }} --stacktrace
