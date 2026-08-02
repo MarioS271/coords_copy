@@ -2,7 +2,7 @@ package net.marios271.coords_copy.platform.neoforge;
 
 //? neoforge {
 
-import net.marios271.coords_copy.platform.Platform;
+/*import net.marios271.coords_copy.platform.Platform;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.VersionInfo;
@@ -26,7 +26,7 @@ public class NeoforgePlatform implements Platform {
 
 	@Override
 	public boolean isDevelopmentEnvironment() {
-		return !FMLLoader/*? if > 1.21.8 {*//*.getCurrent()*//*?}*/.isProduction();
+		return !FMLLoader/^? if > 1.21.8 {^/.getCurrent()/^?}^/.isProduction();
 	}
 }
-//?}
+*///?}
