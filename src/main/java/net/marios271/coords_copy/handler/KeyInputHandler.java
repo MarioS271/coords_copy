@@ -15,11 +15,11 @@ public class KeyInputHandler {
 	public static final String KEY_OPEN_CONFIG = "key.coords_copy.open_config";
 
 	//? >= 1.21.9 {
-	/*public static final KeyMapping.Category COORDS_COPY_CATEGORY =
-			KeyMapping.Category.register(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(CoordsCopy.MOD_ID, "coords_copy"));
-	*///?} else {
-	public static final String COORDS_COPY_CATEGORY = "key.categories.coords_copy";
-	//?}
+	public static final KeyMapping.Category COORDS_COPY_CATEGORY =
+			KeyMapping.Category.register(net.minecraft.resources.Identifier.fromNamespaceAndPath(CoordsCopy.MOD_ID, "coords_copy"));
+	//?} else {
+	/*public static final String COORDS_COPY_CATEGORY = "key.categories.coords_copy";
+	*///?}
 
     public static KeyMapping copyPlayerCoordsKey = new KeyMapping(
 			KEY_COPY_PLAYER_COORDS,
@@ -54,14 +54,14 @@ public class KeyInputHandler {
 		}
 		else if (openConfigKey.consumeClick()) {
 			//? < 26.2 {
-			if (Minecraft.getInstance().screen == null) {
+			/*if (Minecraft.getInstance().screen == null) {
 				Minecraft.getInstance().setScreen(ConfigScreen.create(null, CoordsCopy.CONFIG));
 			}
-			//?} >= 26.2 {
-			/*if (Minecraft.getInstance().gui.screen() == null) {
+			*///?} >= 26.2 {
+			if (Minecraft.getInstance().gui.screen() == null) {
 				Minecraft.getInstance().gui.setScreen(ConfigScreen.create(null, CoordsCopy.CONFIG));
 			}
-			*///?}
+			//?}
 		}
 	}
 }

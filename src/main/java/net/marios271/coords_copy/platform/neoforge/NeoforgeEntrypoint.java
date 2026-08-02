@@ -12,12 +12,12 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLPaths;
 //? < 1.20.5 {
-import net.neoforged.neoforge.client.ConfigScreenHandler;
+/^import net.neoforged.neoforge.client.ConfigScreenHandler;
 import net.neoforged.neoforge.event.TickEvent;
-//?} else {
-/^import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+^///?} else {
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
-^///?}
+//?}
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.common.NeoForge;
 
@@ -28,17 +28,17 @@ public class NeoforgeEntrypoint {
 		CoordsCopy.onInitializeClient(FMLPaths.CONFIGDIR.get().toFile());
 
 		//? < 1.20.5 {
-		modContainer.registerExtensionPoint(
+		/^modContainer.registerExtensionPoint(
 				ConfigScreenHandler.ConfigScreenFactory.class,
 				() -> new ConfigScreenHandler.ConfigScreenFactory(
 						(mc, parent) -> ConfigScreen.create(parent, CoordsCopy.CONFIG))
 		);
-		//?} else {
-		/^modContainer.registerExtensionPoint(
+		^///?} else {
+		modContainer.registerExtensionPoint(
 				IConfigScreenFactory.class,
 				(mc, parent) -> ConfigScreen.create(parent, CoordsCopy.CONFIG)
 		);
-		^///?}
+		//?}
 
 		modBus.addListener(this::onRegisterKeyMappings);
 
@@ -52,19 +52,19 @@ public class NeoforgeEntrypoint {
 	}
 
 	//? < 1.20.5 {
-	@SubscribeEvent
+	/^@SubscribeEvent
 	public void onClientTick(TickEvent.ClientTickEvent event) {
 		if (event.phase != TickEvent.Phase.END)
 			return;
 		Minecraft client = Minecraft.getInstance();
 		KeyInputHandler.onKeyTick(client);
 	}
-	//?} else {
-	/^@SubscribeEvent
+	^///?} else {
+	@SubscribeEvent
 	public void onClientTick(ClientTickEvent.Post event) {
 		Minecraft client = Minecraft.getInstance();
 		KeyInputHandler.onKeyTick(client);
 	}
-	^///?}
+	//?}
 }
 *///?}

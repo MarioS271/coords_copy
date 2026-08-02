@@ -93,10 +93,10 @@ public class CopyBlockCoordsAction {
 		//?}
 
 		//? >= 26.1 {
-        /*if (chatOutput) client.player.sendSystemMessage(msg);
+        if (chatOutput) client.player.sendSystemMessage(msg);
         else client.player.sendOverlayMessage(msg);
-		*///?} else {
-		client.player.displayClientMessage(msg, !chatOutput);
-		//?}
+		//?} else {
+		/*client.player.displayClientMessage(msg, !chatOutput);
+		*///?}
     }
 }
