@@ -12,5 +12,7 @@
 
   "text.coords_copy.config.title": "CoordsCopy-Konfiguration",
   "text.coords_copy.config.category": "CoordsCopy",
-  "text.coords_copy.config.option.chat_instead_of_actionbar": "Sende Ausgabe im Chat statt zur Action Bar"
+  "text.coords_copy.config.option.message_location": "Anzeigeort der Copy-Nachricht",
+  "text.coords_copy.config.option.message_location.value.actionbar": "§3Actionbar§r",
+  "text.coords_copy.config.option.message_location.value.chat": "§dChat§r"
 }

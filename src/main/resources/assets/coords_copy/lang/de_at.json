@@ -2,15 +2,17 @@
   "key.categories.coords_copy": "CoordsCopy",
   "key.category.coords_copy.coords_copy": "CoordsCopy",
   "key.coords_copy.copy_player_coords": "Spülakooadinotn kopian",
-  "key.coords_copy.copy_block_coords": "Blockkooadinotn kopiara",
+  "key.coords_copy.copy_block_coords": "Blockkooadinotn kopian",
   "key.coords_copy.open_config": "Config aufmochn",
 
-  "message.coords_copy.copied_player_coords": "Spülakooadinaotn wuadn kopiat (%s)",
-  "message.coords_copy.copied_block_coords": "Blockkooadinotn wuadn kopiat (%s)",
+  "message.coords_copy.copied_player_coords": "Spülakooadinaotn san kopiat woadn (%s)",
+  "message.coords_copy.copied_block_coords": "Blockkooadinotn san kopiat woadn (%s)",
   "message.coords_copy.no_block": "§cDu schaust kan Block an!§r",
-  "message.coords_copy.error": "§cEtwos is beim kopian dea Kooadinotn des anvisiatn Blocks schiefglaufn§r",
+  "message.coords_copy.error": "§cIangdwos is beim kopian vo de Kooadinotn vom anvisiatn Blocks schiefglaufn§r",
 
   "text.coords_copy.config.title": "CoordsCopy-Konfiguration",
   "text.coords_copy.config.category": "CoordsCopy",
-  "text.coords_copy.config.option.chat_instead_of_actionbar": "Schick Ausgob in Chat stott zua Action Bar"
+  "text.coords_copy.config.option.message_location": "Onzeigoat vo da Copy-Nochricht",
+  "text.coords_copy.config.option.message_location.value.actionbar": "§3Actionbar§r",
+  "text.coords_copy.config.option.message_location.value.chat": "§dChat§r"
 }
