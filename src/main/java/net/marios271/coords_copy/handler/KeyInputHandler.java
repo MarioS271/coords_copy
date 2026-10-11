@@ -7,7 +7,9 @@ import net.marios271.coords_copy.config.ConfigData;
 import net.marios271.coords_copy.config.ConfigScreen;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
-import org.lwjgl.glfw.GLFW;
+//? < 26.3 {
+/*import org.lwjgl.glfw.GLFW;
+*///?}
 
 public class KeyInputHandler {
     public static final String KEY_COPY_PLAYER_COORDS = "key.coords_copy.copy_player_coords";
@@ -23,20 +25,35 @@ public class KeyInputHandler {
 
     public static KeyMapping copyPlayerCoordsKey = new KeyMapping(
 			KEY_COPY_PLAYER_COORDS,
-			InputConstants.Type.KEYSYM,
+			//? < 26.3 {
+			/*InputConstants.Type.KEYSYM,
 			GLFW.GLFW_KEY_F9,
+			*///?} else {
+			InputConstants.Type.KEYBOARD,
+			InputConstants.KEY_F9,
+			//?}
 			COORDS_COPY_CATEGORY
 	);
     public static KeyMapping copyBlockCoordsKey = new KeyMapping(
 			KEY_COPY_BLOCK_COORDS,
-			InputConstants.Type.KEYSYM,
+			//? < 26.3 {
+			/*InputConstants.Type.KEYSYM,
 			GLFW.GLFW_KEY_F10,
+			*///?} else {
+			InputConstants.Type.KEYBOARD,
+			InputConstants.KEY_F10,
+			//?}
 			COORDS_COPY_CATEGORY
 	);
 	public static KeyMapping openConfigKey = new KeyMapping(
 			KEY_OPEN_CONFIG,
-			InputConstants.Type.KEYSYM,
+			//? < 26.3 {
+			/*InputConstants.Type.KEYSYM,
 			GLFW.GLFW_KEY_F12,
+			*///?} else {
+			InputConstants.Type.KEYBOARD,
+			InputConstants.KEY_F12,
+			//?}
 			COORDS_COPY_CATEGORY
 	);
 

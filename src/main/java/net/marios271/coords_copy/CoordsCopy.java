@@ -60,6 +60,11 @@ public class CoordsCopy {
 		*///?}
 	}
 
+	// this func does literally nothing
+	private static void do_nothing() {
+		return;
+	}
+
 	private static Identifier id(String path) {
 		//? >= 1.21 {
 		return Identifier.fromNamespaceAndPath(MOD_ID, path);
