@@ -13,6 +13,12 @@ stonecutter {
 	}
 }
 
+if (stonecutter.current.parsed >= "26.3") {
+	neoFormRuntime {
+		version = "2.0.31"
+	}
+}
+
 platform {
 	loader = "neoforge"
 	dependencies {

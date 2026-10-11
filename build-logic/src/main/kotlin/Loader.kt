@@ -10,7 +10,7 @@ import org.gradle.api.NamedDomainObjectContainer
 import java.util.*
 
 private val JSON = Json { prettyPrint = true; encodeDefaults = true; explicitNulls = false }
-private val TOML = Toml { }
+private val TOML = Toml { explicitNulls = false }
 
 sealed class Loader(val id: String) {
 	abstract fun modManifestPath(ctx: Context): String
@@ -103,6 +103,8 @@ sealed class Loader(val id: String) {
 			addDeps(ctx.extension.dependencies.optional, "optional")
 			addDeps(ctx.extension.dependencies.incompatible, "incompatible")
 
+			val useIconFile = this is NeoForge && ctx.stonecutter.eval(ctx.currentMcVersion, ">=26.3")
+
 			val manifest = ForgeManifest(
 				license = ctx.licenseName,
 				issueTrackerURL = ctx.issuesUrl,
@@ -113,7 +115,10 @@ sealed class Loader(val id: String) {
 						version = ctx.baseVersion,
 						displayURL = ctx.homepageUrl,
 						modUrl = ctx.homepageUrl,
-						logoFile = "icon.png",
+						// NeoForge 26.3 deprecated `logoFile` in favour of `iconFile` (square icons); older
+						// versions and Forge only know `logoFile`.
+						logoFile = "icon.png".takeUnless { useIconFile },
+						iconFile = "icon.png".takeIf { useIconFile },
 						authors = ctx.authors.joinToString(", "),
 						credits = "${ctx.authors.joinToString(", ")} Contributors: ${ctx.contributors.joinToString(", ")}",
 						description = ctx.description
